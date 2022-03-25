@@ -1,0 +1,2 @@
+# amosovApp
+Приложение на flutter
