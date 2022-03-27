@@ -1,6 +1,6 @@
-import 'package:Amosov/routers/routers.dart';
-import 'package:Amosov/ui/home/bloc/home_bloc.dart';
-import 'package:Amosov/utils/value.dart';
+import 'package:amosov/routers/routers.dart';
+import 'package:amosov/ui/home/bloc/home_bloc.dart';
+import 'package:amosov/utils/value.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

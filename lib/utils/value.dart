@@ -1,4 +1,4 @@
-import 'package:Amosov/domain/repository/user_repository.dart';
+import 'package:amosov/domain/repository/user_repository.dart';
 import 'package:ocarina/ocarina.dart';
 
 late UserRepository userRepository;

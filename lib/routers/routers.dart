@@ -1,9 +1,9 @@
-import 'package:Amosov/ui/home/bloc/home_bloc.dart';
-import 'package:Amosov/ui/home/home.dart';
-import 'package:Amosov/ui/settings/bloc/settings_bloc.dart';
-import 'package:Amosov/ui/settings/settings.dart';
-import 'package:Amosov/utils/colors.dart';
-import 'package:Amosov/utils/value.dart';
+import 'package:amosov/ui/home/bloc/home_bloc.dart';
+import 'package:amosov/ui/home/home.dart';
+import 'package:amosov/ui/settings/bloc/settings_bloc.dart';
+import 'package:amosov/ui/settings/settings.dart';
+import 'package:amosov/utils/colors.dart';
+import 'package:amosov/utils/value.dart';
 import 'package:bart/bart/bart_model.dart';
 import 'package:bart/bart/bart_scaffold.dart';
 import 'package:bart/bart/bottom_bar.dart';

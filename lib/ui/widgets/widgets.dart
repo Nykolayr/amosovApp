@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_switch/flutter_switch.dart';
-import 'package:Amosov/utils/colors.dart';
+import 'package:amosov/utils/colors.dart';
 
 class Widgets {
   static Widget lineSwitch(

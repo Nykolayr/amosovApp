@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'package:Amosov/domain/models/multi.dart';
-import 'package:Amosov/domain/repository/user_repository.dart';
-import 'package:Amosov/utils/value.dart';
+import 'package:amosov/domain/models/multi.dart';
+import 'package:amosov/domain/repository/user_repository.dart';
+import 'package:amosov/utils/value.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 

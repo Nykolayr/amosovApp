@@ -1,5 +1,5 @@
-import 'package:Amosov/ui/widgets/app_bar.dart';
-import 'package:Amosov/utils/colors.dart';
+import 'package:amosov/ui/widgets/app_bar.dart';
+import 'package:amosov/utils/colors.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 

@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:Amosov/ui/home/bloc/home_bloc.dart';
-import 'package:Amosov/ui/settings/bloc/settings_bloc.dart';
-import 'package:Amosov/ui/widgets/widgets.dart';
-import 'package:Amosov/utils/colors.dart';
+import 'package:amosov/ui/home/bloc/home_bloc.dart';
+import 'package:amosov/ui/settings/bloc/settings_bloc.dart';
+import 'package:amosov/ui/widgets/widgets.dart';
+import 'package:amosov/utils/colors.dart';
 // ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
