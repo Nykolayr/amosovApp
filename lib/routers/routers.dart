@@ -1,7 +1,8 @@
+import 'package:amosov/ui/history/history_page.dart';
 import 'package:amosov/ui/home/bloc/home_bloc.dart';
-import 'package:amosov/ui/home/home.dart';
+import 'package:amosov/ui/home/home_page.dart';
 import 'package:amosov/ui/settings/bloc/settings_bloc.dart';
-import 'package:amosov/ui/settings/settings.dart';
+import 'package:amosov/ui/settings/settings_page.dart';
 import 'package:amosov/utils/colors.dart';
 import 'package:amosov/utils/value.dart';
 import 'package:bart/bart/bart_model.dart';
@@ -11,7 +12,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../ui/statistics/statistics.dart';
+import '../ui/statistics/statistics_page.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
@@ -32,9 +33,16 @@ List<BartMenuRoute> subRoutes() {
     BartMenuRoute.bottomBar(
       cache: true,
       label: tr('statistics'),
-      icon: Icons.emoji_events_outlined,
+      icon: Icons.timeline,
       path: '/statistics',
       pageBuilder: (context, settings) => const ProgressPage(),
+    ),
+    BartMenuRoute.bottomBar(
+      cache: true,
+      label: tr('history'),
+      icon: Icons.list,
+      path: '/history',
+      pageBuilder: (context, settings) => const HistoryPage(),
     ),
     BartMenuRoute.bottomBar(
       label: tr('settings'),

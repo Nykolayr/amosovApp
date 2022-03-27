@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppColor {
+  static const Color green = Color(0xFF1F8C4D);
+
   static const Color darkBroun = Color(0xFF4B0505);
   static const Color yellow = Color(0xFFFAEA0D);
   static const Color lightgreen = Color(0xFFB8C6A3);
@@ -11,7 +13,6 @@ class AppColor {
   static const Color meddleGrey = Color(0xFF5A5954);
   static const Color darkgrey = Color(0xFF050505);
   static const Color redDark = Color(0xFF470404);
-  static const Color green = Color(0xFF5FB56A);
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0x00000000);
   static const LinearGradient gradDark = LinearGradient(
