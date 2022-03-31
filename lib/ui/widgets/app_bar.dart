@@ -79,7 +79,7 @@ class AppBarWithIcon extends StatelessWidget implements PreferredSizeWidget {
           : [],
       elevation: 5,
       automaticallyImplyLeading: false,
-      backgroundColor: AppColor.darkBroun,
+      backgroundColor: AppColor.green,
     );
   }
 }

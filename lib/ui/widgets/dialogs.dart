@@ -48,7 +48,7 @@ Widget dialogLang(BuildContext context, SettingsBloc _settingsBloc) {
             style: const TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w500,
-              color: AppColor.darkBroun,
+              color: AppColor.green,
             ),
           ),
           const SizedBox(

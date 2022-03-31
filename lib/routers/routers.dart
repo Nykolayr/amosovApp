@@ -86,7 +86,7 @@ class _MainPageMenuState extends State<MainPageMenu> {
         elevation: 10,
         selectedItemColor: AppColor.yellow,
         unselectedItemColor: Colors.white,
-        bgColor: AppColor.darkBroun,
+        bgColor: AppColor.green,
         bottomBarFactory: BartMaterialBottomBar.bottomBarFactory,
       ),
     );

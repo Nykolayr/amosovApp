@@ -1,3 +1,4 @@
+import 'package:amosov/ui/exercises/Exercises_page.dart';
 import 'package:amosov/ui/settings/bloc/settings_bloc.dart';
 import 'package:amosov/ui/widgets/app_bar.dart';
 import 'package:amosov/ui/widgets/dialogs.dart';
@@ -49,8 +50,17 @@ class _SettingsPageState extends State<SettingsPage> {
             const SizedBox(
               height: 36,
             ),
-            GestureDetector(
-              onTap: () async {
+            Widgets.lineGoPage(
+              goto: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ExercisesPage()));
+              },
+              title: tr('exercise_management'),
+            ),
+            Widgets.lineGoPage(
+              goto: () async {
                 await showModalBottomSheet(
                   enableDrag: true,
                   isScrollControlled: true,
@@ -60,37 +70,8 @@ class _SettingsPageState extends State<SettingsPage> {
                   builder: (context) => dialogLang(context, _settingsBloc),
                 );
               },
-              child: Container(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 4,
-                ),
-                color: Colors.transparent,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      tr('lang'),
-                      style: const TextStyle(
-                          color: AppColor.yellow,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500),
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          _settingsBloc.lang + '   ',
-                          style: const TextStyle(
-                              color: AppColor.white,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400),
-                        ),
-                        SvgPicture.asset('assets/icon/arrow_right.svg',
-                            height: 14, color: AppColor.white),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
+              title: tr('lang'),
+              body: _settingsBloc.lang + '   ',
             ),
             Widgets.lineSwitch(
               title: tr('sound'),

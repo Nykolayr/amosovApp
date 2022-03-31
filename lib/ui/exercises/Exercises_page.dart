@@ -9,14 +9,14 @@ import 'package:flutter/material.dart';
 // ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
-class ProgressPage extends StatefulWidget {
-  const ProgressPage({Key? key}) : super(key: key);
+class ExercisesPage extends StatefulWidget {
+  const ExercisesPage({Key? key}) : super(key: key);
 
   @override
-  _ProgressPageState createState() => _ProgressPageState();
+  _ExercisesPageState createState() => _ExercisesPageState();
 }
 
-class _ProgressPageState extends State<ProgressPage> {
+class _ExercisesPageState extends State<ExercisesPage> {
   late HomeBloc _homeBloc;
   @override
   void initState() {
@@ -26,10 +26,16 @@ class _ProgressPageState extends State<ProgressPage> {
 
   @override
   Widget build(BuildContext context) {
+    int count = _homeBloc.userRepository.falseAnswer +
+        _homeBloc.userRepository.trueAnswer;
+    int countAll = _homeBloc.userRepository.falseAnswerAll +
+        _homeBloc.userRepository.trueAnswerAll;
+    if (count == 0) count = 1;
+    if (countAll == 0) countAll = 1;
     context.watch<HomeBloc>();
     return Scaffold(
       backgroundColor: AppColor.meddleGrey,
-      appBar: AppBarWithIcon(title: tr('statistics')),
+      appBar: AppBarWithIcon(title: tr('exercises')),
       body: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: 25,

@@ -4,6 +4,44 @@ import 'package:flutter_switch/flutter_switch.dart';
 import 'package:amosov/utils/colors.dart';
 
 class Widgets {
+  static Widget lineGoPage(
+      {required Function() goto, required String title, String body = ''}) {
+    return GestureDetector(
+      onTap: goto,
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          vertical: 24,
+        ),
+        color: Colors.transparent,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              title,
+              style: const TextStyle(
+                  color: AppColor.yellow,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500),
+            ),
+            Row(
+              children: [
+                Text(
+                  body,
+                  style: const TextStyle(
+                      color: AppColor.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400),
+                ),
+                SvgPicture.asset('assets/icon/arrow_right.svg',
+                    height: 14, color: AppColor.white),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   static Widget lineSwitch(
       {required String title,
       required String body,
@@ -12,7 +50,7 @@ class Widgets {
     return Column(
       children: [
         const SizedBox(
-          height: 36,
+          height: 24,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,10 +92,10 @@ class Widgets {
       ),
       color: Colors.transparent,
       child: FlutterSwitch(
-          activeColor: AppColor.darkBroun,
+          activeColor: AppColor.green,
           inactiveColor: AppColor.lightBlue,
           activeToggleColor: AppColor.white,
-          inactiveToggleColor: AppColor.darkBroun,
+          inactiveToggleColor: AppColor.green,
           width: 40.0,
           height: 24.0,
           toggleSize: 16.0,
@@ -95,27 +133,6 @@ class Widgets {
     );
   }
 
-  static Widget buttonCifra(int cifra, Function callBack) {
-    if (cifra == 10) cifra = 0;
-    return GestureDetector(
-      onTap: () => callBack(cifra),
-      child: Container(
-        margin: const EdgeInsets.only(right: 10),
-        height: 58,
-        decoration: BoxDecoration(
-          gradient: AppColor.gradDark,
-          borderRadius: BorderRadius.circular(10),
-          border: AppColor.border,
-        ),
-        alignment: Alignment.center,
-        child: Text(
-          '$cifra',
-          style: AppText.textWhite42,
-        ),
-      ),
-    );
-  }
-
   static Widget iconAction(String sign, Function callBack) {
     return GestureDetector(
       onTap: () => callBack(),
@@ -129,36 +146,10 @@ class Widgets {
             width: 20,
             height: 20,
             fit: BoxFit.fill,
-            color: AppColor.darkBroun,
+            color: AppColor.green,
           ),
           backgroundColor: Colors.white,
         ),
-      ),
-    );
-  }
-
-  static Widget buttonSign(String sign, Function callBack) {
-    return GestureDetector(
-      onTap: () => callBack(sign),
-      child: Container(
-        height: 58,
-        width: 75,
-        decoration: BoxDecoration(
-          gradient: AppColor.gradBlue,
-          borderRadius: BorderRadius.circular(10),
-          border: AppColor.border,
-        ),
-        alignment: Alignment.center,
-        child: (sign == '')
-            ? SvgPicture.asset(
-                "assets/icon/delete.svg",
-                height: 16,
-                color: Colors.white,
-              )
-            : Text(
-                sign,
-                style: AppText.textWhite42,
-              ),
       ),
     );
   }
