@@ -1,5 +1,6 @@
 import 'package:amosov/ui/home/bloc/home_bloc.dart';
 import 'package:amosov/ui/widgets/app_bar.dart';
+import 'package:amosov/ui/widgets/widgets.dart';
 import 'package:amosov/utils/colors.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -47,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                   margin: EdgeInsets.symmetric(
                     vertical: 10,
                   ),
-                  color: AppColor.yellowLyght,
+                  color: AppColor.white,
                   shadowColor: AppColor.darkBroun,
                   elevation: 10,
                   child: Padding(
@@ -58,7 +59,9 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Text(
                           tr('begin_text'),
-                          style: AppText.textDarkBlue18,
+                          style: AppText.textDarkBlue18.copyWith(
+                            fontStyle: FontStyle.italic,
+                          ),
                         ),
                         const SizedBox(
                           height: 14,
@@ -89,6 +92,10 @@ class _HomePageState extends State<HomePage> {
                   elevation: 10,
                   child: Image.asset('assets/img/photo.jpg'),
                 ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Widgets.button('Далее'),
               ],
             ),
           )),

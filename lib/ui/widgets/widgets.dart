@@ -154,19 +154,25 @@ class Widgets {
     );
   }
 
-  static Widget buttonEnter(Function callBack, String text) {
+  static Widget button(
+    String text, {
+    Function()? callBack,
+  }) {
     return GestureDetector(
-      onTap: () => callBack(),
+      onTap: () => callBack,
       child: Container(
         height: 58,
-        width: 80,
+        width: double.infinity,
         decoration: BoxDecoration(
-          gradient: AppColor.gradRed,
+          gradient: AppColor.gradGreen,
           borderRadius: BorderRadius.circular(10),
           border: AppColor.border,
         ),
         alignment: Alignment.center,
-        child: Text(text, style: AppText.textWhite22),
+        child: Text(
+          text,
+          style: AppText.textWhite22,
+        ),
       ),
     );
   }
