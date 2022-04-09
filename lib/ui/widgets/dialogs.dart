@@ -130,7 +130,7 @@ Widget dialog(BuildContext context, String title, String body) {
             child: Text(
               title,
               style: const TextStyle(
-                  color: AppColor.redDark,
+                  color: AppColor.red,
                   fontSize: 21,
                   fontWeight: FontWeight.bold),
             ),

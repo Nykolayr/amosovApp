@@ -34,15 +34,16 @@ class _ExercisesPageState extends State<ExercisesPage> {
     if (countAll == 0) countAll = 1;
     context.watch<HomeBloc>();
     return Scaffold(
-      backgroundColor: AppColor.meddleGrey,
+      backgroundColor: AppColor.darkgreen,
       appBar: AppBarWithIcon(title: tr('exercises')),
       body: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: 25,
         ),
-        height: double.infinity,
+        width: double.infinity,
         decoration: BoxDecoration(
-            gradient: AppColor.gradDark, color: AppColor.darkBlue),
+          color: AppColor.darkgreen,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [],

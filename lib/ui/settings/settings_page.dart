@@ -33,7 +33,7 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     context.watch<SettingsBloc>();
     return Scaffold(
-      backgroundColor: AppColor.meddleGrey,
+      backgroundColor: AppColor.darkgreen,
       appBar: AppBarWithIcon(
         title: tr('settings'),
       ),
@@ -41,9 +41,10 @@ class _SettingsPageState extends State<SettingsPage> {
         padding: const EdgeInsets.symmetric(
           horizontal: 25,
         ),
-        height: double.infinity,
-        decoration: const BoxDecoration(
-            gradient: AppColor.gradDark, color: AppColor.darkBlue),
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: AppColor.darkgreen,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

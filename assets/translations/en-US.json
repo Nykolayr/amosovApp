@@ -20,5 +20,10 @@
    "begin_text": "«Doctors treat diseases, and you need to get health yourself — by training.»",
    "amosov": "Nikolai Mikhailovich Amosov",
    "begin": "Here we go!",
-   "next": "The next exercise..."
+   "next": "The next exercise...",
+   "attention": "Attention!",
+   "pulse": "Pulse",
+   "lower_pressure": "Lower pressure",
+   "upper_pressure": "Upper pressure",
+   "weight": "Weight"
 }

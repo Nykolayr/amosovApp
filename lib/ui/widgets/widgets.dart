@@ -181,7 +181,7 @@ class Widgets {
         height: 40,
         width: 120,
         decoration: BoxDecoration(
-          gradient: AppColor.gradBlue,
+          gradient: AppColor.gradGreen,
           borderRadius: BorderRadius.circular(10),
           border: AppColor.border,
         ),
