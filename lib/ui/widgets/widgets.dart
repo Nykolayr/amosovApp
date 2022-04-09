@@ -154,26 +154,23 @@ class Widgets {
     );
   }
 
-  static Widget button(
-    String text, {
-    Function()? callBack,
-  }) {
-    return GestureDetector(
-      onTap: () => callBack,
-      child: Container(
-        height: 58,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          gradient: AppColor.gradGreen,
-          borderRadius: BorderRadius.circular(10),
-          border: AppColor.border,
-        ),
-        alignment: Alignment.center,
-        child: Text(
-          text,
-          style: AppText.textWhite22,
-        ),
+  static Widget genericContainer(
+      {Widget? child,
+      EdgeInsets padding = const EdgeInsets.all(10),
+      EdgeInsets margin = const EdgeInsets.symmetric(
+        vertical: 10,
       ),
+      Gradient? gradient,
+      BorderRadius? radius}) {
+    return Container(
+      padding: padding,
+      margin: margin,
+      decoration: BoxDecoration(
+        gradient: AppColor.twoColorGradient(),
+        borderRadius: radius ?? BorderRadius.circular(10.0),
+        boxShadow: AppColor.borderGradientLight(),
+      ),
+      child: child,
     );
   }
 

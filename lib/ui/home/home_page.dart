@@ -1,5 +1,6 @@
 import 'package:amosov/ui/home/bloc/home_bloc.dart';
 import 'package:amosov/ui/widgets/app_bar.dart';
+import 'package:amosov/ui/widgets/button.dart';
 import 'package:amosov/ui/widgets/widgets.dart';
 import 'package:amosov/utils/colors.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -32,70 +33,73 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Container(
           padding: const EdgeInsets.symmetric(
-            vertical: 25,
+            vertical: 15,
             horizontal: 25,
           ),
           color: AppColor.darkgreen,
           height: double.infinity,
           child: Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                  margin: EdgeInsets.symmetric(
-                    vertical: 10,
-                  ),
-                  color: AppColor.white,
-                  shadowColor: AppColor.darkBroun,
-                  elevation: 10,
-                  child: Padding(
-                    padding: EdgeInsets.all(
-                      20,
-                    ),
-                    child: Column(
-                      children: [
-                        Text(
-                          tr('begin_text'),
-                          style: AppText.textDarkBlue18.copyWith(
-                            fontStyle: FontStyle.italic,
+                Column(
+                  children: [
+                    Widgets.genericContainer(
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        color: AppColor.white,
+                        shadowColor: AppColor.darkBroun,
+                        child: Padding(
+                          padding: EdgeInsets.all(
+                            20,
+                          ),
+                          child: Column(
+                            children: [
+                              Text(
+                                tr('begin_text'),
+                                style: AppText.textDarkBlue18.copyWith(
+                                  fontStyle: FontStyle.italic,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 14,
+                              ),
+                              Align(
+                                alignment: Alignment.bottomRight,
+                                child: Text(
+                                  tr('amosov'),
+                                  style: AppText.textDarkBlue18.copyWith(
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        const SizedBox(
-                          height: 14,
-                        ),
-                        Align(
-                          alignment: Alignment.bottomRight,
-                          child: Text(
-                            tr('amosov'),
-                            style: AppText.textDarkBlue18.copyWith(
-                              fontSize: 16,
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
+                    Widgets.genericContainer(
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        color: AppColor.lightgreen,
+                        shadowColor: AppColor.darkBroun,
+                        elevation: 10,
+                        child: Image.asset('assets/img/photo.jpg'),
+                      ),
+                    ),
+                  ],
                 ),
-                Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                  margin: EdgeInsets.symmetric(
-                    vertical: 10,
-                  ),
-                  color: AppColor.lightgreen,
-                  shadowColor: AppColor.darkBroun,
-                  elevation: 10,
-                  child: Image.asset('assets/img/photo.jpg'),
+                GenericButton(
+                  tr("begin"),
+                  () => {},
+                  isEnabled: true,
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Widgets.button('Далее'),
               ],
             ),
           )),

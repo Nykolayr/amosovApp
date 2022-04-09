@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class AppColor {
   static const Color green = Color(0xFF1F8C4D);
+  static const Color green2 = Color.fromARGB(255, 3, 107, 46);
+  static const Color green3 = Color.fromARGB(255, 1, 94, 39);
   static const Color darkBroun = Color(0xFF4B0505);
   static const Color yellow = Color(0xFFFAEA0D);
   static const Color yellowLyght = Color(0xFFFCFAE5);
@@ -14,11 +16,40 @@ class AppColor {
   static const Color meddleGrey = Color(0xFF5A5954);
   static const Color darkgrey = Color(0xFF050505);
   static const Color darkgreen = Color(0xFF034C15);
-  static const Color darkgreen2 = Color(0xFF034C15);
+  static const Color darkgreen2 = Color.fromARGB(255, 1, 27, 7);
   static const Color greenMeedle = Color(0xFF99FF00);
   static const Color redDark = Color(0xFF470404);
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0x00000000);
+  static LinearGradient twoColorGradient({
+    Alignment begin = Alignment.topCenter,
+    Alignment end = Alignment.bottomCenter,
+  }) {
+    return LinearGradient(
+      colors: const [
+        green2,
+        green3,
+      ],
+      begin: begin,
+      end: end,
+    );
+  }
+
+  static List<BoxShadow> borderGradientLight() {
+    return [
+      BoxShadow(
+        color: green,
+        spreadRadius: 0.5,
+        offset: Offset(0, -0.5),
+      ),
+      BoxShadow(
+        color: darkgreen2,
+        spreadRadius: 0.5,
+        offset: Offset(0, 1),
+      ),
+    ];
+  }
+
   static const LinearGradient gradDark = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
@@ -29,10 +60,11 @@ class AppColor {
     end: Alignment.bottomCenter,
     colors: [lightBlue, lightBlue2],
   );
+
   static const LinearGradient gradGreen = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
-    colors: [greenMeedle, darkgreen2, green],
+    colors: [green2, green],
   );
   static const LinearGradient gradRed = LinearGradient(
     begin: Alignment.topCenter,
