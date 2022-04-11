@@ -17,8 +17,8 @@ class GenericButton extends StatelessWidget {
     this.onTap, {
     this.key,
     this.isEnabled = true,
-    this.buttonBg = AppColor.darkgreen,
-    this.bgColor = AppColor.darkgreen,
+    this.buttonBg = AppColor.green3,
+    this.bgColor = AppColor.green2,
     this.hasGradient = true,
     this.borderRadius = 13,
   });
@@ -32,7 +32,7 @@ class GenericButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: bgColor,
           border: Border.all(
-            color: isEnabled ? AppColor.green : AppColor.meddleGrey,
+            color: isEnabled ? AppColor.green : AppColor.darkgrey,
             width: 2,
           ),
           borderRadius: BorderRadius.all(
@@ -53,7 +53,7 @@ class GenericButton extends StatelessWidget {
                           ? AppColor.gradGreen
                           : null
                       : null,
-                  color: isEnabled ? AppColor.grey : AppColor.meddleGrey,
+                  color: isEnabled ? AppColor.grey : AppColor.darkgrey,
                 ),
                 child: Center(
                   child: Text(title,

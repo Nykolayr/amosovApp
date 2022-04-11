@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         color: AppColor.white,
-                        shadowColor: AppColor.darkBroun,
+                        shadowColor: AppColor.black,
                         child: Padding(
                           padding: EdgeInsets.all(
                             20,
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         color: AppColor.lightgreen,
-                        shadowColor: AppColor.darkBroun,
+                        shadowColor: AppColor.black,
                         elevation: 10,
                         child: Image.asset('assets/img/photo.jpg'),
                       ),

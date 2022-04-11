@@ -93,7 +93,7 @@ class Widgets {
       color: Colors.transparent,
       child: FlutterSwitch(
           activeColor: AppColor.green,
-          inactiveColor: AppColor.lightBlue,
+          inactiveColor: AppColor.lightgreen,
           activeToggleColor: AppColor.white,
           inactiveToggleColor: AppColor.green,
           width: 40.0,
@@ -181,7 +181,7 @@ class Widgets {
         height: 40,
         width: 120,
         decoration: BoxDecoration(
-          gradient: AppColor.gradGreen,
+          gradient: AppColor.twoColorGradient(),
           borderRadius: BorderRadius.circular(10),
           border: AppColor.border,
         ),

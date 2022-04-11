@@ -1,3 +1,4 @@
+import 'package:amosov/ui/exercises/Exercises_page.dart';
 import 'package:amosov/ui/history/history_page.dart';
 import 'package:amosov/ui/home/bloc/home_bloc.dart';
 import 'package:amosov/ui/home/home_page.dart';
@@ -25,7 +26,8 @@ Future appPushNamed(String route, {Object? arguments}) =>
 List<BartMenuRoute> subRoutes() {
   return [
     BartMenuRoute.bottomBar(
-      label: tr("training"),
+      label: 'Главный',
+      // tr("training"),
       icon: Icons.home,
       path: '/training',
       pageBuilder: (context, settings) => const HomePage(),
@@ -40,9 +42,18 @@ List<BartMenuRoute> subRoutes() {
     BartMenuRoute.bottomBar(
       cache: true,
       label: tr('history'),
-      icon: Icons.list,
+      icon: Icons.auto_stories,
       path: '/history',
       pageBuilder: (context, settings) => const HistoryPage(),
+    ),
+    BartMenuRoute.bottomBar(
+      label: tr('exercises'),
+      icon: Icons.accessibility_new,
+      path: '/exercises',
+      pageBuilder: (context, settings) => BlocProvider(
+        create: (_) => SettingsBloc(userRepository),
+        child: const ExercisesPage(),
+      ),
     ),
     BartMenuRoute.bottomBar(
       label: tr('settings'),
@@ -88,6 +99,9 @@ class _MainPageMenuState extends State<MainPageMenu> {
         unselectedItemColor: Colors.white,
         bgColor: AppColor.green,
         bottomBarFactory: BartMaterialBottomBar.bottomBarFactory,
+        selectedFontSize: 6.0,
+        unselectedFontSize: 6.0,
+        iconSize: 26,
       ),
     );
   }
